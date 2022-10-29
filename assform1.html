@@ -32,7 +32,7 @@
        
 
 
-  <form>
+  <form method="post">
         <div> <p> 
             1. Over the past 2 weeks, how often have you been bothered by any of the following problems: <b>Little interest </b>or <b>pleasure in doing things</b>?</p>
             <input type="radio" id="1ans1" name= "ans1" value="Not At all">
@@ -180,15 +180,15 @@
 
         <!--Add to button to save the data.-->
         <div>
-            <input type="button" id="bt" value="SUBMIT ASSESSMENT" onclick="saveFile()" />
+            <input type="button" id="bt" value="SUBMIT" />
         </div>
          </div>
   </form>
 
 
-    </body>
+    
 </body>
-<script>
+<!--<script>
     let saveFile = () => {
     	
         // Get the data from each element on the form.
@@ -232,5 +232,36 @@
 
         newLink.click(); 
     }
-</script>
+</script> -->
 </html>
+
+<!-- <?php
+if(isset($_POST['SUBMIT'])){
+$ans1 = "Ans1:".$_POST['ans1']."
+";
+$ans2 = "Ans2:".$_POST['ans2']."
+";
+$ans3 = "Ans3:".$_POST['ans3']."
+";
+$ans4 = "Ans4:".$_POST['ans4']."
+";
+$ans5 = "Ans5:".$_POST['ans5']."
+";
+$ans6 = "Ans6:".$_POST['ans6']."
+";
+$ans7 = "Ans7:".$_POST['ans7']."
+";
+$ans8 = "Ans8:".$_POST['ans8']."
+";
+$file=fopen("saved.txt", "a");
+fwrite($file, $ans1);
+fwrite($file, $ans2);
+fwrite($file, $ans3);
+fwrite($file, $ans4);
+fwrite($file, $ans5);
+fwrite($file, $ans6);
+fwrite($file, $ans7);
+fwrite($file, $ans8);
+fclose($file);
+}
+?> -->
